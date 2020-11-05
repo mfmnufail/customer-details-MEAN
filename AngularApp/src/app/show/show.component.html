@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content white-text">
+        <div class="row">
+
+          <div class="col s12">
+              <table class="responsive-table highlight">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Address</th>
+                      <th>Phone</th>
+                      <th>NIC</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let contes of contestentService.contestents">
+                    <td>{{contes.name}}</td>
+                    <td>{{contes.address}}</td>
+                    <td>{{contes.phone}}</td>
+                    <td>{{contes.nic}}</td>
+
+                    <td>
+                      <a class="action-btn" (click)="onEdit(contes)">
+                        <i class="material-icons">edit</i>
+                      </a>
+                      <a class="action-btn" (click)="onDelete(contes._id,contestentForm)">
+                        <i class="material-icons">delete</i>
+                      </a>
+                    </td>
+
+                  </tr>
+                </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
